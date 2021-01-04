@@ -1,6 +1,6 @@
 # z/OS TSO Zowe CLI SDK and IBM RSE API example
 
-This example shows how to use the Zowe CLI TSE SDK and the IBM RSE API alternatively to run TSO commands.
+This example shows how to use the Zowe CLI TSE SDK and the IBM RSE API alternatively to run TSO commands. It extends the example provided here for the Zowe CLI TSO SDK: <https://github.com/zowe/zowe-cli/tree/master/packages/zostso>
 
 ## How to build
 

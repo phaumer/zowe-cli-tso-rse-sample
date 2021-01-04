@@ -9,6 +9,7 @@
  *
  */
 
+import * as process from 'process';
 import {
   IProfile,
   Session,
@@ -19,8 +20,10 @@ import {
 import { ZosmfSession } from '@zowe/zosmf-for-zowe-sdk';
 import { getDefaultProfile } from '@zowe/core-for-zowe-sdk';
 import { IssueTso } from '@zowe/zos-tso-for-zowe-sdk';
+
+// RSE API used for issuing a command
 import { RseRestSession, IssueCommand } from '@ibm/rse-api-for-zowe-cli';
-import * as process from 'process';
+
 
 let apiOption = process.argv[2];
 if (!apiOption) {
@@ -39,6 +42,7 @@ if (!apiOption) {
   const command = 'status';
   let response: any;
 
+  // The Zowe CLI implementation requiring a z/OSMF and TSO profile
   if (apiOption === '-zosmf') {
     let defaultTsoProfile: IProfile;
     try {
@@ -56,6 +60,7 @@ if (!apiOption) {
       command
     );
 
+  // The RSE API implementation only requiring an RSE profile
   } else if (apiOption === '-rse') {
     try {
       defaultApiProfile = await getDefaultProfile('rse', true);
