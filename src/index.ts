@@ -64,9 +64,11 @@ if (!apiOption) {
     }
     session = RseRestSession.createBasicRestSession(defaultApiProfile);
     response = await IssueCommand.tsoCommand(session, command);
+  } else {
+    throw new Error(`Invalid option. Run with "-zosmf" or "-rse".`);
   }
 
-  if (response.success) {
+  if (response?.success) {
     console.log(response);
   } else {
     throw new Error(`Failed to issue TSO command "${command}"`);
