@@ -4,7 +4,7 @@ This example shows how to use the Zowe CLI TSE SDK and the IBM RSE API alternati
 
 ## How to build
 
-- Install the IBM RSE API client PM package
+- Install the IBM RSE API client NPM package
 - Edit the package.json file to point to the location of your installation
 - Build with yarn or npm
 
@@ -15,13 +15,13 @@ yarn
 ## How to run
 
 ```bash
-yarn yarn run-zosmf
+yarn run-zosmf
 ```
 
 or
 
 ```bash
-yarn yarn run-rse
+yarn run-rse
 ```
 
 ## Known issues
